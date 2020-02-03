@@ -7,18 +7,28 @@
 </head>
 <body>
 	<div class="container">
-		<div id="buttons">
-      <button id="play-rock">Kamień</button>
-      <button id="play-paper">Papier</button>
-      <button id="play-scissors">Nożyce</button>
-    </div>
-		<div id="messages"></div>
-		<div class="score">
-			<div id="player-score">0</div>
-			<div id="computer-score">0</div>
+		<header>
+			<h1>ROCK or PAPER or SCISSORS</h1>
+		</header>
+
+		<section class="content">
+			<div id="result">
+			<!-- <div id="player-score" class="indScore">0</div> -->
+			<div id="computer-score" class="indScore">0</div>
 		</div>
+		<div class="meessagesWrapper">
+			<h2 id="messages">Testowa wiadomość</h2>
+		</div>
+		<div class="bottom">
+				<div id="buttons">
+				<img src="/images/rock.png" id="play-rock" class="play-rock">
+				<img src="/images/paper.png" id="play-paper" class="play-paper">
+				<img src="/images/scissors.png" id="play-scissors" class="play-scissors">
+				<div id="player-score" class="indScore">0</div>
+			</div>
+		</section>
+		
 	</div>
-	<script src="js/functions.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html> 
