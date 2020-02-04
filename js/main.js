@@ -7,29 +7,38 @@ let computer = 0;
 function computerChoice() {
   const number = Math.floor(Math.random() * 3);
   const permittedMove = [rock, paper, scissors];
+  let comOpt;
+  if(permittedMove[number] === rock){
+    comOpt = document.getElementById('comp-rock');
+    comOpt.classList.add('active');
+  } else if (permittedMove[number] === paper){
+    comOpt = document.getElementById('comp-paper');
+    comOpt.classList.add('active');
+  } else if(permittedMove[number] === scissors){
+    comOpt = document.getElementById('comp-scissors');
+    comOpt.classList.add('active');
+  }
   return permittedMove[number];
 };
 
 function displayResult(computerMove, playerMove) {
-  printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
 
   if(computerMove === playerMove) {
-    printMessage('Remis! Niesamowite!!');
+    printMessage('Draw :O');
   } else if (
     (computerMove === paper && playerMove === scissors) ||
     (computerMove === scissors && playerMove === rock) ||
     (computerMove === rock && playerMove === paper)
   ) {      
-    printMessage('Ty wygrywasz!');
+    printMessage('OMG! You won!!!');
     addPoint('Player point');
   } else {
-    printMessage('Ty przegrywasz!');
+    printMessage('Sorry! You lost! :(');
     addPoint('Computer point');
   }
 };
 
 function addPoint(score) {
-
   if (score === 'Player point') {
     let playerScore = document.getElementById('player-score');
     player = player + 1;
@@ -53,16 +62,26 @@ function printMessage(msg) {
   document.getElementById('messages').appendChild(div);
 }
 
+function clearClass() {
+  const compOpts = document.querySelectorAll('.compOpt');
+  for(let compOpt of compOpts){
+    compOpt.classList.remove('active');
+  }
+}
+
 function clearMessages() {
   document.getElementById('messages').innerHTML = '';
 }
 
 document.getElementById('play-rock').addEventListener('click', function () {
+  clearClass();
   playGame(rock);
 });
 document.getElementById('play-paper').addEventListener('click', function () {
+  clearClass();
   playGame(paper);
 });
 document.getElementById('play-scissors').addEventListener('click', function () {
+  clearClass();
   playGame(scissors);
 });
