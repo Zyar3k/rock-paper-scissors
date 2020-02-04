@@ -11,7 +11,7 @@ function computerChoice() {
 };
 
 function displayResult(computerMove, playerMove) {
-  printMessage("Zagrałem " + computerMove + ", a Ty " + playerMove);
+  printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
 
   if(computerMove === playerMove) {
     printMessage('Remis! Niesamowite!!');
@@ -20,21 +20,21 @@ function displayResult(computerMove, playerMove) {
     (computerMove === scissors && playerMove === rock) ||
     (computerMove === rock && playerMove === paper)
   ) {      
-    printMessage("Ty wygrywasz!");
-    addPoint("Player point");
+    printMessage('Ty wygrywasz!');
+    addPoint('Player point');
   } else {
     printMessage('Ty przegrywasz!');
-    addPoint("Computer point");
+    addPoint('Computer point');
   }
 };
 
 function addPoint(score) {
 
-  if (score === "Player point") {
+  if (score === 'Player point') {
     let playerScore = document.getElementById('player-score');
     player = player + 1;
     playerScore.innerHTML = player;
-  } else if (score === "Computer point") {
+  } else if (score === 'Computer point') {
     let compScore = document.getElementById('computer-score');
     computer = computer + 1;
     compScore.innerHTML = computer;
@@ -48,21 +48,21 @@ function playGame(playerMove) {
 };
 
 function printMessage(msg) {
-  const div = document.createElement("div");
+  const div = document.createElement('div');
   div.innerHTML = msg;
-  document.getElementById("messages").appendChild(div);
+  document.getElementById('messages').appendChild(div);
 }
 
 function clearMessages() {
-  document.getElementById("messages").innerHTML = "";
+  document.getElementById('messages').innerHTML = '';
 }
 
-document.getElementById('play-rock').addEventListener("click", function () {
+document.getElementById('play-rock').addEventListener('click', function () {
   playGame(rock);
 });
-document.getElementById('play-paper').addEventListener("click", function () {
+document.getElementById('play-paper').addEventListener('click', function () {
   playGame(paper);
 });
-document.getElementById('play-scissors').addEventListener("click", function () {
+document.getElementById('play-scissors').addEventListener('click', function () {
   playGame(scissors);
 });

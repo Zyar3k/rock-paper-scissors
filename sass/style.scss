@@ -19,25 +19,26 @@ body {
 }
 
 header h1{
-  margin: 0;
-  padding: 60px;
-  font-size: 50px;
-  font-family: 'Permanent Marker', cursive;
+  margin: 0;  
 }
 
-.bottom {
+section.bottom {
+  left: 0;
+  width: 100%;
   bottom: 0;
   position: fixed;
+  display: flex;
+  justify-content: center;
 }
 
 .bottom #buttons {
-  display: flex;
-  justify-content: space-evenly;
+  padding-bottom: 30px;
 }
 
 img {
-  width: 300px;
-  filter: grayscale(2);
+  margin: 0;
+  height: 200px;
+  filter: grayscale(1);
   transition: 0.5s;
   transform: scale(0.6);
 }
@@ -75,4 +76,22 @@ img:hover {
   width: 50%;
   border: 6px solid black;
   border-radius: 16px;
-}  
+}
+
+/* Footer */ //DONE
+
+footer {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: rgb(61, 60, 60);
+
+  p {
+    margin: 3px 0;
+    color: grey;
+    letter-spacing: 4px;
+  }
+}

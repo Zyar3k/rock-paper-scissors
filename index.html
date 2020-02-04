@@ -8,24 +8,43 @@
 <body>
 	<div class="container">
 		<header>
-			<h1>ROCK or PAPER or SCISSORS</h1>
+			<div class="title">
+				<h1>ROCK PAPER SCISSORS</h1>
+				<h3>Przykładowy tekst</h3>
+			</div>
+			<div class="scores-wrapp">
+				<div class="score-wrapper">
+					<p>Player</p>
+					<div id="player-score" class="indScore">0</div>
+				</div>
+				<div class="score-wrapper">
+					<p>Computer</p>
+					<div id="computer-score" class="indScore">0</div>
+				</div>
+			</div>
 		</header>
 
-		<section class="content">
-			<div id="result">
-			<div id="player-score" class="indScore">0</div>
-			<div id="computer-score" class="indScore">0</div>
-		</div>
-		<div class="meessagesWrapper">
-			<h2 id="messages">Testowa wiadomość</h2>
-		</div>
-		<div class="bottom">
-				<div id="buttons">
-				<img src="../images/rock.png" id="play-rock" class="play-rock">				
-				<img src="../images/scissors.png" id="play-scissors" class="play-scissors">
-				<img src="../images/paper.png" id="play-paper" class="play-paper">
+		<section class="middle">
+			<div class="meessagesWrapper">
+				<h2 id="messages">Testowa <br> wiadomość</h2>
 			</div>
 		</section>
+
+		
+	
+		<section class="bottom">
+			<div id="buttons">
+				<img src="../images/rock.png" alt="rock" id="play-rock" class="play-rock">
+				<img src="../images/scissors.png" alt="scissors" id="play-scissors" class="play-scissors">
+				<img src="../images/paper.png" alt="paper" id="play-paper" class="play-paper">
+			</div>
+		</section>
+
+		<footer>
+			<p>
+				Copyright @ Zyar3k 2020
+			</p>
+		</footer>
 
 	</div>
 	<script src="js/main.js"></script>

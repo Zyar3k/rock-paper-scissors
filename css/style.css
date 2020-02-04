@@ -20,26 +20,27 @@ body {
 
 header h1 {
   margin: 0;
-  padding: 60px;
-  font-size: 50px;
-  font-family: 'Permanent Marker', cursive;
 }
 
-.bottom {
+section.bottom {
+  left: 0;
+  width: 100%;
   bottom: 0;
   position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .bottom #buttons {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
+  padding-bottom: 30px;
 }
 
 img {
-  width: 300px;
-  filter: grayscale(2);
+  margin: 0;
+  height: 200px;
+  filter: grayscale(1);
   transition: 0.5s;
   transform: scale(0.6);
 }
@@ -81,5 +82,24 @@ img:hover {
   width: 50%;
   border: 6px solid black;
   border-radius: 16px;
+}
+
+/* Footer */
+footer {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: #3d3c3c;
+}
+
+footer p {
+  margin: 3px 0;
+  color: grey;
+  letter-spacing: 4px;
 }
 /*# sourceMappingURL=style.css.map */
