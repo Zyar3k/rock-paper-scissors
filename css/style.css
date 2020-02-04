@@ -136,4 +136,34 @@ footer p {
   color: grey;
   letter-spacing: 4px;
 }
+
+@media (max-width: 425px) {
+  header h1 {
+    letter-spacing: 4px;
+    font-size: 40px;
+  }
+  .meessagesWrapper #compOptions {
+    padding-top: 10px;
+  }
+  .meessagesWrapper #compOptions img {
+    height: 50px;
+    padding: 0;
+  }
+  .meessagesWrapper #messages p {
+    font-size: 40px;
+    text-shadow: white 2px 2px 8px;
+    letter-spacing: 4px;
+  }
+  section.bottom .bottom-text {
+    letter-spacing: 8px;
+    margin-bottom: 0;
+  }
+  section.bottom #buttons {
+    padding-bottom: 30px;
+  }
+  section.bottom #buttons img {
+    margin: 0;
+    height: 100px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
