@@ -4,16 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Kamień, papier, nożyce</title>
+	<title>ROCK PAPER SCISSORS</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
+		
 		<header>
 			<div class="title">
 				<h1>ROCK PAPER SCISSORS</h1>
 				<h3>Are you ready to play?</h3>
 			</div>
+		</header>
+
+		<section class="middle">
+
 			<div class="scores-wrapp">
 				<div class="score-wrapper">
 					<p>Player</p>
@@ -24,17 +29,20 @@
 					<div id="computer-score" class="ind-score">0</div>
 				</div>
 			</div>
-		</header>		
-		<section class="middle">
-			<div class="meessagesWrapper">				
-				<div id="compOptions">
-					<img src="./images/rock.png" alt="rock" id="comp-rock" class="comp-rock compOpt">
-					<img src="./images/scissors.png" alt="scissors" id="comp-scissors" class="comp-scissors compOpt">
-					<img src="./images/paper.png" alt="paper" id="comp-paper" class="comp-paper compOpt">		
-				</div>
-				<p id="messages"></p>
+			<div class="compChoice">Computer choice:</div>
+			<div id="compOptions">
+				<img src="./images/rock.png" alt="rock" id="comp-rock" class="comp-rock compOpt">
+				<img src="./images/scissors.png" alt="scissors" id="comp-scissors" class="comp-scissors compOpt">
+				<img src="./images/paper.png" alt="paper" id="comp-paper" class="comp-paper compOpt">		
 			</div>
-		</section>		
+			
+		</section>
+		
+		<section class="meessagesWrapper">
+
+			<p id="messages"></p>
+		</section>	
+
 		<section class="bottom">
 			<div class="bottom-text">
 				<h2>Choose your weapon</h2>

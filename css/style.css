@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Devonshire&display=swap&subset=latin-ext");
+/* const */
 body {
   margin: 0;
   padding: 0;
@@ -18,6 +19,12 @@ body {
   height: 100vh;
 }
 
+/* header */
+header {
+  margin: 0;
+  padding: 0;
+}
+
 header h1 {
   margin: 0;
   letter-spacing: 8px;
@@ -28,11 +35,14 @@ header h1 {
 }
 
 header h3 {
+  margin: 0;
+  padding: 0;
   letter-spacing: 8px;
   text-transform: uppercase;
   text-shadow: red 1px 1px 10px;
 }
 
+/* middle */
 .scores-wrapp {
   display: -ms-flexbox;
   display: flex;
@@ -47,22 +57,28 @@ header h3 {
   border: solid 6px red;
   border-radius: 28px;
   border-style: outset;
-  background: black;
+  background: #171717;
 }
 
 .scores-wrapp .score-wrapper p, .scores-wrapp .score-wrapper .ind-score {
   font-size: 14px;
-  color: white;
+  color: #b4b4b4;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: white 2px 2px 8px;
+  text-shadow: #b4b4b4 2px 2px 8px;
 }
 
 .scores-wrapp .score-wrapper .ind-score {
   font-size: 30px;
 }
 
-.meessagesWrapper #compOptions img {
+.compChoice {
+  font-size: 40px;
+  color: #171717;
+  text-shadow: red 1px 1px 10px;
+}
+
+#compOptions img {
   height: 80px;
   padding: 0 10px;
   opacity: 0.2;
@@ -70,18 +86,24 @@ header h3 {
   transform: scale(0.8);
 }
 
-.meessagesWrapper #compOptions img.active {
+#compOptions img.active {
   opacity: 1;
   transform: scale(1);
 }
 
+/* messages */
 .meessagesWrapper #messages {
   font-size: 40px;
-  text-shadow: white 2px 2px 8px;
+  text-shadow: #b4b4b4 2px 2px 8px;
   letter-spacing: 4px;
+  margin: 0;
+  padding: 0;
 }
 
+/* bottom */
 section.bottom {
+  margin: 0;
+  padding: 0;
   left: 0;
   width: 100%;
   bottom: 0;
@@ -92,6 +114,11 @@ section.bottom .bottom-text {
   text-shadow: red 1px 1px 10px;
   letter-spacing: 8px;
   margin-bottom: 80px;
+}
+
+section.bottom h2 {
+  margin: 0;
+  padding: 0;
 }
 
 section.bottom .player-choice {
@@ -118,7 +145,7 @@ section.bottom #buttons img:hover {
   transform: scale(1);
 }
 
-/* Footer */
+/* footer */
 footer {
   left: 0;
   width: 100%;
@@ -137,33 +164,57 @@ footer p {
   letter-spacing: 4px;
 }
 
+/* mobile */
 @media (max-width: 425px) {
+  /* header */
   header h1 {
     letter-spacing: 4px;
     font-size: 40px;
   }
-  .meessagesWrapper #compOptions {
+  /* middle */
+  #compOptions {
     padding-top: 10px;
   }
-  .meessagesWrapper #compOptions img {
+  #compOptions img {
     height: 50px;
     padding: 0;
   }
-  .meessagesWrapper #messages p {
-    font-size: 40px;
-    text-shadow: white 2px 2px 8px;
-    letter-spacing: 4px;
-  }
+  /* bottom */
   section.bottom .bottom-text {
     letter-spacing: 8px;
     margin-bottom: 0;
   }
-  section.bottom #buttons {
-    padding-bottom: 30px;
+  section.bottom #buttons img {
+    height: 95px;
+  }
+}
+
+@media (max-width: 375px) {
+  /* header */
+  header h1 {
+    padding: 10px 0;
+    font-size: 34px;
+  }
+  header h3 {
+    font-size: 14px;
+    letter-spacing: 6px;
+  }
+  /* middle */
+  .scores-wrapp {
+    padding: 0 20px;
+  }
+  #compOptions img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* middle */
+  .compChoice {
+    font-size: 20px;
   }
   section.bottom #buttons img {
-    margin: 0;
-    height: 100px;
+    height: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
