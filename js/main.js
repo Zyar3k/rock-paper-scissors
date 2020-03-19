@@ -24,16 +24,16 @@ function computerChoice() {
 function displayResult(computerMove, playerMove) {
 
   if(computerMove === playerMove) {
-    printMessage('Draw :O');
+    printMessage('Remis :O');
   } else if (
     (computerMove === paper && playerMove === scissors) ||
     (computerMove === scissors && playerMove === rock) ||
     (computerMove === rock && playerMove === paper)
   ) {      
-    printMessage('OMG! You won!!!');
+    printMessage('Gratulacje! Wygrałeś!!!');
     addPoint('Player point');
   } else {
-    printMessage('Sorry! You lost! :(');
+    printMessage('Przykro mi, przegrałeś :(');
     addPoint('Computer point');
   }
 };
