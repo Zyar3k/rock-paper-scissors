@@ -1,94 +1,99 @@
-// @import url('https://fonts.googleapis.com/css?family=Devonshire&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap&subset=latin-ext');
-
-// font-family: 'Baloo 2', cursive;
 
 /* const */
 
 $dark-color: rgb(23, 23, 23);
 $light-color: rgb(180, 180, 180);
-$content-color: red;
-$title-text-shadow: $content-color 2px 2px 4px;
-$content-text-shadow: $content-color 1px 1px 10px;
-
-
-
 
 body {
   margin: 0;
   padding: 0;
-  // font-family: 'Devonshire', cursive;
   font-family: 'Baloo 2', cursive;
-  // background-image: url('../images/bg.jpeg');
+  background-image: url('../images/bg.jpeg');
   object-fit: cover;
   background-size: cover;
   background-position: center;
+  letter-spacing: 2px;
+    
+  .textChoice {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
 }
 
 .container {
-  background: grey;
   margin: 0 auto;
   padding: 0;
   text-align: center;
   max-width: 1280px;
   height: 100vh;
-}
-
-/* header */
-
-header {
-  // background: #000; //out
-  // color: white; //out
-
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
 }
 
-.titleWrap {
-  // background: red;
-
-  .title {
-    margin: 0;
-    padding: 0;
-  }
-
-  .subtitle {
-    margin: 0;
-    padding: 0;
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  width: 98%;
+  text-align: center;
+  
+  .titleWrap {
+    text-transform: uppercase;
+    padding: 10px;
+    letter-spacing: 6px;
+    
+    .title {
+      margin: 0;
+      font-size: 54px;
+      font-weight: bold;
+      border-bottom: 1px solid $dark-color;
+      background: rgba(white, 0.6);
+    }
+  
+    .subtitle {
+      margin: 0;
+      padding: 10px;
+      font-size: 30px;
+    }
   }
 }
 
 .scores-wrapp {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 30px;
 
   .score-wrapper {
     height: 100px;
     width: 100px;
-    border: solid 6px $content-color;
+    border: solid 6px $dark-color;
+    background: rgba(white, 0.5);
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
-
     P {
       margin: 0;
       padding: 0;
+      text-transform: uppercase;
     }
 
     .ind-score {
       margin: 0;
       padding: 0;
+      font-size: 30px;
     }
   }
 }
 
-.middle {
+section.middle {
   display: flex;
   flex-direction: column;
-
 
   #compOptions {
     display: flex;
@@ -96,18 +101,34 @@ header {
 
     img {
       height: 80px;
+      opacity: 0.2;
+      transition: 0.5s;
+      transform: scale(0.8);
+      padding: 6px;
+    }
+
+    img.active {
+      opacity: 1;
+      transform: scale(1);
     }
   }
+}
 
+section.info {
+  color: $dark-color;
+  height: 10%;
+  
+  #messages {
+    font-size: 40px;
+    margin: auto 0;
+    background: rgba(white, 0.3);
+  }
 }
 
 .bottom {
-  // background: #000;
-  // bottom: 0;
-
+  margin-bottom: 30px;
 
   .player-choice {
-
 
     img {
       height: 200px;
@@ -116,16 +137,11 @@ header {
       transform: scale(0.6);
       &:hover {
         filter: grayscale(0);
-      transform: scale(1);
+        transform: scale(1);
       }
     }
   }
-
-
-
 }
-
-/* footer */
 
 footer {
   left: 0;
@@ -143,250 +159,100 @@ footer {
   }
 }
 
+@media (max-width: 850px) {
+  header {
 
+    .titleWrap {
 
-// /* header */
+      .title {
+        font-size: 40px;
+      }
+    }
+  }
+}
 
-// header {
-//   margin: 0;
-//   padding: 0;
+@media (max-width: 500px) {
+  body {
 
-//   background: #000;
-// }
+    .textChoice {
+      font-size: 16px;
+    }
+  }
 
-// header h1{
-//   margin: 0;
-//   letter-spacing: 8px;
-//   font-size: 60px;
-//   border-bottom: 1px solid;
-//   padding: 0;
-//   text-shadow: $title-text-shadow;
-// }
+  header {
+    width: 100%;
+    margin: 0;
 
-// header h3{
-//   margin: 0;
-//   padding: 0;
-//   letter-spacing: 8px;
-//   text-transform: uppercase;
-//   text-shadow: $content-text-shadow
-// }
+    .titleWrap {
+      padding: 0;
+      letter-spacing: 2px;
 
-// .scores-wrapp {
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 0 50px;
+      .title {
+        font-size: 26px;
+        border-bottom: none;
+      }
+
+      .subtitle {
+        margin: 0;
+        padding: 6px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .scores-wrapp {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
   
-//   background: red;
+    .score-wrapper {
+      height: 60px;
+      width: 120px;
+      border: solid 2px $dark-color;
+      border-radius: 18px;
+      justify-content: space-between;
   
-//   .score-wrapper {
-//     height: 100px;
-//     width: 100px;
-//     border: solid 6px $content-color;
-//     border-radius: 28px;
-//     border-style: outset;
-//     background: $dark-color;
+      .ind-score {
+        font-size: 24px;
+      }
+    }
+  }
+
+  section.middle {
+    display: flex;
+    flex-direction: column;  
+  
+    #compOptions {
+  
+      img {
+        height: 70px;
+      }
+    }
+  }
+
+  section.info {
     
-//     p, .ind-score {
-//       font-size: 14px;
-//       color: $light-color;
-//       letter-spacing: 2px;
-//       text-transform: uppercase;
-//       text-shadow: $light-color 2px 2px 8px;
-//     }
-    
-//     .ind-score {
-//       font-size: 30px;
-//     }
-//   }
-// }
+    #messages {
+      font-size: 28px;
+    }
+  }
 
-// /* middle */
-
-// .middle {
-//   background: #000;
-// }
-
-// .compChoice {
-//   font-size: 40px;
-//   color: $dark-color;
-//   text-shadow: $content-text-shadow;
-
-//   background: red;
+  .bottom {
   
-
-// }
-
-// #compOptions {
-//   img {
-//     height: 80px;
-//     padding: 0 10px;
-//     opacity: 0.2;
-//     transition: 0.5s;
-//     transform: scale(0.8);
-//   }
-
-//   img.active {
-//     opacity: 1;
-//     transform: scale(1);
-//   }
-// }
-
-// /* messages */
-
+    .player-choice {
   
-//   #messages {
-//     font-size: 40px;
-//     text-shadow: $light-color 2px 2px 8px;
-//     letter-spacing: 4px;
-//     margin: 0;
-//     padding: 0;
-//   }
+      img {
+        height: 100px;
+      }
+    }
+  }
 
-// /* bottom */
+  footer {
 
-// section.bottom {
-//   margin: 0;
-//   padding: 0;
-//   left: 0;
-//   width: 100%;
-//   bottom: 0;
-//   position: fixed;
-
-//   background: red;
-
-//   .bottom-text {
-//     text-shadow: $content-text-shadow;
-//     letter-spacing: 8px;
-//     margin-bottom: 80px;
-//   }
-
-//   h2 {
-//     margin: 0;
-//     padding: 0;   
-//   }
-
-//   .player-choice {
-//     display: flex;
-//     justify-content: center;
-//   }
-
-//   #buttons {
-//     padding-bottom: 30px;
-  
-//     img {
-//       margin: 0;
-//       height: 200px;
-//       filter: grayscale(1);
-//       transition: 0.5s;
-//       transform: scale(0.6);
-//     }
-  
-//     img:hover {
-//       filter: grayscale(0);
-//       transform: scale(1);
-//     }
-//   }
-// }
-
-// /* footer */
-
-// footer {
-//   left: 0;
-//   width: 100%;
-//   bottom: 0;
-//   position: fixed;
-//   display: flex;
-//   justify-content: center;
-//   background: rgb(61, 60, 60);
-
-//   p {
-//     margin: 3px 0;
-//     color: grey;
-//     letter-spacing: 4px;
-//   }
-// }
-
-// /* mobile */
-
-// @media (max-width: 425px) {
-
-//   /* header */
-
-//   header h1 {
-//     letter-spacing: 4px;
-//     font-size: 40px;
-//   }
-
-//   /* middle */
-
-//   #compOptions {
-//     padding-top: 10px;
-
-//     img {
-//       height: 50px;
-//       padding: 0;
-//     }
-//   }
-
-//   /* bottom */
-
-//   section.bottom {
-  
-//     .bottom-text {
-//       letter-spacing: 8px;
-//       margin-bottom: 0;
-//     }
-
-//     #buttons {
-    
-//       img {
-//         height: 95px;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 375px) {
-
-//   /* header */
-
-//   header h1 {
-//     padding: 10px 0;
-//     font-size: 34px;
-//   }
-  
-//   header h3 {
-//     font-size: 14px;
-//     letter-spacing: 6px;
-//   }
-
-//   /* middle */
-
-//   .scores-wrapp {
-//     padding: 0 20px;
-//   }
-
-//   #compOptions {
-//     img {
-//       height: 60px;
-//     }
-//   }  
-// }
-
-// @media (max-width: 320px) {
-
-//   /* middle */
-
-//   .compChoice {
-//     font-size: 20px;
-//   }
-
-//   section.bottom {
-//     #buttons {
-      
-//       img {
-//         height: 70px;
-//       }    
-//     }
-//   }
-// }
+    p {
+      margin: 0;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+  }
+}

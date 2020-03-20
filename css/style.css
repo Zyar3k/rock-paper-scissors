@@ -4,50 +4,78 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Baloo 2', cursive;
+  background-image: url("../images/bg.jpeg");
   object-fit: cover;
   background-size: cover;
   background-position: center;
+  letter-spacing: 2px;
+}
+
+body .textChoice {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0;
 }
 
 .container {
-  background: grey;
   margin: 0 auto;
   padding: 0;
   text-align: center;
   max-width: 1280px;
   height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
-/* header */
 header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  width: 98%;
+  text-align: center;
 }
 
-.titleWrap .title {
-  margin: 0;
-  padding: 0;
+header .titleWrap {
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 6px;
 }
 
-.titleWrap .subtitle {
+header .titleWrap .title {
   margin: 0;
-  padding: 0;
+  font-size: 54px;
+  font-weight: bold;
+  border-bottom: 1px solid #171717;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+header .titleWrap .subtitle {
+  margin: 0;
+  padding: 10px;
+  font-size: 30px;
 }
 
 .scores-wrapp {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 0 30px;
 }
 
 .scores-wrapp .score-wrapper {
   height: 100px;
   width: 100px;
-  border: solid 6px red;
+  border: solid 6px #171717;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -59,29 +87,55 @@ header {
 .scores-wrapp .score-wrapper P {
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .scores-wrapp .score-wrapper .ind-score {
   margin: 0;
   padding: 0;
+  font-size: 30px;
 }
 
-.middle {
+section.middle {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
 }
 
-.middle #compOptions {
+section.middle #compOptions {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
 }
 
-.middle #compOptions img {
+section.middle #compOptions img {
   height: 80px;
+  opacity: 0.2;
+  transition: 0.5s;
+  transform: scale(0.8);
+  padding: 6px;
+}
+
+section.middle #compOptions img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+section.info {
+  color: #171717;
+  height: 10%;
+}
+
+section.info #messages {
+  font-size: 40px;
+  margin: auto 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bottom {
+  margin-bottom: 30px;
 }
 
 .bottom .player-choice img {
@@ -96,7 +150,6 @@ header {
   transform: scale(1);
 }
 
-/* footer */
 footer {
   left: 0;
   width: 100%;
@@ -113,5 +166,72 @@ footer p {
   margin: 3px 0;
   color: grey;
   letter-spacing: 4px;
+}
+
+@media (max-width: 850px) {
+  header .titleWrap .title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  body .textChoice {
+    font-size: 16px;
+  }
+  header {
+    width: 100%;
+    margin: 0;
+  }
+  header .titleWrap {
+    padding: 0;
+    letter-spacing: 2px;
+  }
+  header .titleWrap .title {
+    font-size: 26px;
+    border-bottom: none;
+  }
+  header .titleWrap .subtitle {
+    margin: 0;
+    padding: 6px;
+    font-size: 18px;
+  }
+  .scores-wrapp {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 30px;
+  }
+  .scores-wrapp .score-wrapper {
+    height: 60px;
+    width: 120px;
+    border: solid 2px #171717;
+    border-radius: 18px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .scores-wrapp .score-wrapper .ind-score {
+    font-size: 24px;
+  }
+  section.middle {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  section.middle #compOptions img {
+    height: 70px;
+  }
+  section.info #messages {
+    font-size: 28px;
+  }
+  .bottom .player-choice img {
+    height: 100px;
+  }
+  footer p {
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
