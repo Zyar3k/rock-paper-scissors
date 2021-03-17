@@ -20,7 +20,7 @@
 
 To run app
 ```sh
-cd numerology_4.0.0
+cd rock-paper-scissors
 npm run init-project
 npm run watch
 ```
